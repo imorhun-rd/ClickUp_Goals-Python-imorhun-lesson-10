@@ -29,7 +29,3 @@ workflows:
   build-and-test:
     jobs:
       - python-job
-
-.circleci
-
-config.yml
