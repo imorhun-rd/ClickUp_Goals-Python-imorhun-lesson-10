@@ -69,7 +69,7 @@ def test_crud_goal():
                         ('null',                                 500),
                         ('90157056273',                          404),
                         ('2181229f-0cb3-4b1b-92c7-df9d831144af', 404),
-                        ('d03803fb-4450-4a1c-a5af-b976c6bb8b27', 200)
+                        ('14bfe02e-4f50-4ca3-872c-e92789257cca', 200)
 ])
 def test_get_parameterized_list(goal_id, status):
     result = requests.get("https://api.clickup.com/api/v2/goal/" + goal_id, headers=my_headers)
