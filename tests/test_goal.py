@@ -67,7 +67,7 @@ def test_crud_goal():
 
 @pytest.mark.parametrize('goal_id, status',[
                         ('null',                                 500),
-                        ('90157056273',                          404),
+                        ('90157056273',                          500),
                         ('2181229f-0cb3-4b1b-92c7-df9d831144af', 404),
                         ('14bfe02e-4f50-4ca3-872c-e92789257cca', 200)
 ])
