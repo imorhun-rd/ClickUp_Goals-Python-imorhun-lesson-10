@@ -13,7 +13,7 @@ def create_goal():
         "name": fake.first_name(),
         "description": fake.last_name()
     }
-    result = requests.post("https://api.clickup.com/api/v2/team/90151115904/goal", headers=my_headers, json=body)
+    result = requests.post("https://api.clickup.com/api/v2/team/90151237180/goal", headers=my_headers, json=body)
     return result, body
 
 
@@ -40,10 +40,10 @@ def create_goal_fixture(param_name):
     body = {
         "name": param_name
     }
-    result = requests.post("https://api.clickup.com/api/v2/team/90151115904/goal", headers=my_headers, json=body)
+    result = requests.post("https://api.clickup.com/api/v2/team/90151237180/goal", headers=my_headers, json=body)
     return result
 
 def create_goal_from_file(body):
-    result = requests.post("https://api.clickup.com/api/v2/team/90151115904/goal", headers=my_headers, json=body)
+    result = requests.post("https://api.clickup.com/api/v2/team/90151237180/goal", headers=my_headers, json=body)
     print(result)
     return result

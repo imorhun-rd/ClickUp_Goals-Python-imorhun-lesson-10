@@ -8,11 +8,14 @@ from pytest_steps import test_steps
 fake = Faker()
 from modules.goal_methods import create_goal, update_goal, get_goal, delete_goal, create_goal_fixture, create_goal_from_file
 
-my_headers = {"Authorization": "pk_188594880_VUA8ZX8E036Z790JW5WBC5H55H0U9ZJL"}
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
+my_headers = {"Authorization": os.getenv("my_token")}
 
 def test_get_all_goals():
-    result = requests.get("https://api.clickup.com/api/v2/team/90151115904/goal", headers=my_headers)
+    result = requests.get("https://api.clickup.com/api/v2/team/90151237180/goal", headers=my_headers)
     assert result.status_code == 200
     print(result.json())
 
